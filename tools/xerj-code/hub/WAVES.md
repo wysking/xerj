@@ -267,3 +267,20 @@ reading cron.md (it carries the etymology sentence, not the `crontab -e`
 clause, and crontab.md never surfaced); (3) nats-protocol's pass certifies
 the PINNED repo (ADR collection) — the re-pin to a wire-protocol mirror is
 queued and will require a fresh G7, recorded in the graded notes.
+
+## 2026-10-29: proposed author-candidate promotion — `wysking--quantitera`
+
+- Agent-prepared Lane A application from `354b4e44890822bed192344bc0c50bf4c2446c8a`: 66 files / 343402 bytes; 320 locally indexed records on verified official `v1.0.0-rc.100` (Windows x64).
+- G1–G3: specific niche research-engine precedent and runnable synthetic code/tests retained.
+- G4: agent opened pinned licence/notices and documented scope in `review`; **human licence sign-off pending**. Original attribution ledger remains unchanged.
+- G5: built from the merged public source commit; independent clean rebuild reproduced pin, files, bytes and per-file SHA-256 inventory.
+- G6: local registry gate run; official Rust manifest test evidence is linked in the application PR. Engine code unchanged.
+- G7: five queries written before retrieval; agent relevant/top-5 counts `[4, 5, 3, 2, 3]`. **Human grading/sign-off pending**; these are agent judgments, not a human pass.
+- Limits: excluded `quantitera_calendars` implementation and source-derived schedules; reference subset is not an installable distribution.
+- `live` in the proposed backlog row is required by the validator for a root manifest. It does not mean this PR is merged, human gates are passed, or the official Hub has published it.
+
+  Q1: `evidence known_at available_at source` — 4/5 relevant (agent).
+  Q2: `expectations surprise consensus revision` — 5/5 relevant (agent).
+  Q3: `review due feedback objective outcome` — 3/5 relevant (agent).
+  Q4: `knowledge supersedes normalize evidence` — 2/5 relevant (agent).
+  Q5: `performance cash flows fees benchmark` — 3/5 relevant (agent).

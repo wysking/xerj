@@ -13611,7 +13611,7 @@
    "slug": "pyverge",
    "sources": [
     {
-     "licence_hint": "Apache-2.0 \u2014 LICENSE verified at pin",
+     "licence_hint": "Apache-2.0 — LICENSE verified at pin",
      "url": "https://github.com/JoHa-HQ/pyverge"
     }
    ],
@@ -13648,6 +13648,20 @@
      "developer-tools"
     ]
    }
+  },
+  {
+   "cat": "API",
+   "domain": "an agent working on evidence-based economic research queries this for source/availability boundaries, prior expectations, knowledge supersession, scoped reviews and separate performance scorecards; finite exchange calendars are excluded",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "wysking--quantitera",
+   "sources": [
+    {
+     "licence_hint": "MIT selected first-party code/docs; calendar package excluded",
+     "url": "https://github.com/wysking/quantitera"
+    }
+   ],
+   "status": "live"
   }
  ],
  "lanes": [
