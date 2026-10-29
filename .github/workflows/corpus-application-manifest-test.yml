@@ -1,0 +1,21 @@
+name: One-off corpus application manifest test
+on:
+  push:
+    branches: [verify/corpus-manifests-20261029]
+permissions:
+  contents: read
+jobs:
+  manifest:
+    if: github.repository == 'wysking/xerj'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Record toolchain and verify the official consumer manifest gate
+        working-directory: engine
+        run: |
+          rustc --version
+          cargo --version
+          cargo test --locked --profile ci-test -p xerj-common xccode::manifest
