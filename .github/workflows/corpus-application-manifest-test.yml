@@ -5,17 +5,25 @@ on:
 permissions:
   contents: read
 jobs:
-  manifest:
+  registry:
     if: github.repository == 'wysking/xerj'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        ref: [corpus/wysking-quantitera-20261029, corpus/wysking-study-engine-20261029]
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ matrix.ref }}
           persist-credentials: false
-      - name: Record toolchain and verify the official consumer manifest gate
-        working-directory: engine
+      - name: Run the official registry gate on the exact proposal branch
         run: |
-          rustc --version
-          cargo --version
-          cargo test --locked --profile ci-test -p xerj-common xccode::manifest
+          python3 tools/xerj-code/hub/validate_hub.py
+          found=$(find tools/xerj-code/hub tools/packs -type f -size +5M -not -path "*/keys/*" | tee /dev/stderr | wc -l)
+          if find tools/packs/keys -type f 2>/dev/null | grep -q .; then
+            if grep -rlE 'BEGIN .*PRIVATE KEY' tools/packs/keys 2>/dev/null; then
+              echo 'private key material under tools/packs/keys'; exit 1
+            fi
+          fi
+          [ "$found" -eq 0 ]
